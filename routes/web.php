@@ -14,3 +14,15 @@
 $app->get('/', function () use ($app) {
     return $app->version();
 });
+
+
+/**
+ * Routes for resource advertisements
+ */
+$app->get('advertisements', 'AdvertisementsController@all');
+$app->get('advertisements/{id}', 'AdvertisementsController@get');
+$app->post('advertisements', 'AdvertisementsController@add');
+$app->put('advertisements/{id}', 'AdvertisementsController@put');
+$app->delete('advertisements/{id}', 'AdvertisementsController@remove');
+
+
